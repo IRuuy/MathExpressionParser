@@ -35,6 +35,7 @@ class LexemeListFactoryTest {
                 BinaryArithmeticOperator.MINUS,
                 BinaryArithmeticOperator.MULTIPLICATION,
                 BinaryArithmeticOperator.DIVISION,
+                BinaryArithmeticOperator.REMAINDER,
 
                 BinaryLogicOperator.AND,
                 BinaryLogicOperator.OR,
