@@ -1,7 +1,7 @@
 package ru.shulgindaniil.token.type.impl.divider;
 
 public enum FunctionArgs implements Divider {
-    COMMA(",(?=(?:[^\\\"]*\\\"[^\\\"]*\\\")*[^\\\"]*$)");
+    COMMA(",");
     private final String regex;
     FunctionArgs(String regex) {
         this.regex = regex;
