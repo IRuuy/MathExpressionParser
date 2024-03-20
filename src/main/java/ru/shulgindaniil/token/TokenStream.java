@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @EqualsAndHashCode
+@ToString
 public class TokenStream implements Iterator<Token> {
     private List<Token> tokens;
     private int indexNextToken;
