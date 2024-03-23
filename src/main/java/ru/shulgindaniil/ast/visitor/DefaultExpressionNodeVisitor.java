@@ -8,12 +8,14 @@ import ru.shulgindaniil.ast.impl.valueNode.impl.FunctionNode;
 import ru.shulgindaniil.ast.impl.valueNode.impl.ValueNodeImpl;
 import ru.shulgindaniil.ast.impl.valueNode.impl.operatorNode.impl.BinaryOperationNode;
 import ru.shulgindaniil.ast.impl.valueNode.impl.operatorNode.impl.UnaryOperationNode;
+import ru.shulgindaniil.exception.NullTokensException;
 import ru.shulgindaniil.token.Token;
 
 import java.util.List;
 import java.util.Map;
 import java.util.stream.DoubleStream;
 
+import static ru.shulgindaniil.token.type.impl.Identifier.IDENTIFIER;
 import static ru.shulgindaniil.token.type.impl.function.FunctionImpl.*;
 import static ru.shulgindaniil.token.type.impl.operator.binary.impl.BinaryArithmeticOperator.*;
 import static ru.shulgindaniil.token.type.impl.operator.binary.impl.BinaryComparisonOperator.*;
@@ -106,11 +108,13 @@ public class DefaultExpressionNodeVisitor implements ExpressionNodeVisitor {
     @Override
     public VisitorData visitValueNode(ValueNodeImpl node) {
         Token value = node.getValue();
-
-        if(data != null && data.containsKey(value.getValue())){
-            return data.get(value.getValue());
+        if(value.getType().equals(IDENTIFIER)){
+            if(data != null && data.containsKey(value.getValue())){
+                return data.get(value.getValue());
+            } else {
+                throw new NullPointerException();
+            }
         }
-
         return new VisitorData(value.getValue());
     }
 }
