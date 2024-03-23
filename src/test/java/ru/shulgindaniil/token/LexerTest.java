@@ -49,7 +49,7 @@ class LexerTest {
             TokenStream assertedTokenStream = new TokenStream(
                     List.of(
                             new Token(NOT, "NOT", new Range(0, 3)),
-                            new Token(IDENTIFIER, "name_field", new Range(4, 15)),
+                            new Token(IDENTIFIER, "name_field", new Range(4, 14)),
                             new Token(EQUAL, "=", new Range(15,16)),
                             new Token(STRING, "value", new Range(17, 24)),
                             new Token(AND, "AND", new Range(25, 28)),
@@ -93,7 +93,7 @@ class LexerTest {
             TokenStream assertedTokensStream = new TokenStream(
                     List.of(
                             new Token(CUSTOM_NOT, "CUSTOM_NOT", new Range(0,10)),
-                            new Token(Identifier.IDENTIFIER, "name_field", new Range(11,22)),
+                            new Token(Identifier.IDENTIFIER, "name_field", new Range(11,21)),
                             new Token(CUSTOM_EQUAL, "CUSTOM_EQUAL", new Range(22,34)),
                             new Token(Constant.STRING, "value", new Range(35,42))
                     )
