@@ -8,6 +8,7 @@ import ru.shulgindaniil.ast.impl.valueNode.impl.FunctionNode;
 import ru.shulgindaniil.ast.impl.valueNode.impl.ValueNodeImpl;
 import ru.shulgindaniil.ast.impl.valueNode.impl.operatorNode.impl.BinaryOperationNode;
 import ru.shulgindaniil.ast.visitor.DefaultExpressionNodeVisitor;
+import ru.shulgindaniil.ast.visitor.ExpressionNodeVisitor;
 import ru.shulgindaniil.ast.visitor.VisitorData;
 import ru.shulgindaniil.exception.RequireAnotherTokenException;
 import ru.shulgindaniil.facade.MathExpressionParserFacade;
@@ -47,7 +48,7 @@ public class VisitorTest {
                 new ValueNodeImpl(new Token(NUMBER, "2.0", null))
         );
 
-        VisitorData result = node.accept(new VisitorImpl(new HashMap<>()));
+        VisitorData result = node.accept(new VisitorImpl());
         assertTrue(result.toBoolean());
     }
 
@@ -69,7 +70,7 @@ public class VisitorTest {
 
         ExpressionNode fun1 = new FunctionNode(new Token(MAX, "MAX", null), args1);
 
-        VisitorData accept = fun1.accept(new DefaultExpressionNodeVisitor(new HashMap<>()));
+        VisitorData accept = fun1.accept(new DefaultExpressionNodeVisitor());
         assertEquals(accept.toDouble(), 2.0);
     }
 

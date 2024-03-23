@@ -11,10 +11,6 @@ import java.util.Map;
 import static ru.shulgindaniil.visitor.CustomFunction.LOG;
 
 public class VisitorImpl extends DefaultExpressionNodeVisitor {
-    public VisitorImpl(Map<String, VisitorData> data) {
-        super(data);
-    }
-
     @Override
     public VisitorData visitFunctionNode(FunctionNode node) {
         List<ExpressionNode> args = node.getArgs().getNode().getItems();
