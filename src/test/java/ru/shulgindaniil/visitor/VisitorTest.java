@@ -78,6 +78,23 @@ public class VisitorTest {
      * <i><b>STATEMENT: </b></i>variable <b>=</b> string
      */
     @Test
+    void testVisitorWithIncorrectVariable() {
+        Map<String, VisitorData> data = new HashMap<>();
+        data.put("name", new VisitorData("Mike"));
+
+        ExpressionNode node = new BinaryOperationNode(
+                new ValueNodeImpl(new Token(IDENTIFIER, "incorrect_variable", null)),
+                new Token(EQUAL, "=", null),
+                new ValueNodeImpl(new Token(STRING, "Mike", null))
+        );
+
+        assertThrows(NullPointerException.class, () -> node.accept(new DefaultExpressionNodeVisitor(data)));
+    }
+
+    /**
+     * <i><b>STATEMENT: </b></i>variable <b>=</b> string
+     */
+    @Test
     void testVisitorWithVariable() {
         Map<String, VisitorData> data = new HashMap<>();
         data.put("name", new VisitorData("Mike"));
