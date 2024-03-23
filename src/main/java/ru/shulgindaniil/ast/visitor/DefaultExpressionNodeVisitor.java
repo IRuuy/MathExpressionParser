@@ -1,5 +1,6 @@
 package ru.shulgindaniil.ast.visitor;
 
+import lombok.NoArgsConstructor;
 import ru.shulgindaniil.ast.ExpressionNode;
 import ru.shulgindaniil.ast.impl.ListNode;
 import ru.shulgindaniil.ast.impl.ParenthesesNode;
@@ -20,13 +21,13 @@ import static ru.shulgindaniil.token.type.impl.operator.binary.impl.BinaryLogicO
 import static ru.shulgindaniil.token.type.impl.operator.unary.UnaryOperatorImpl.NOT;
 import static ru.shulgindaniil.token.type.impl.operator.unary.UnaryOperatorImpl.UNARY_MINUS;
 
+@NoArgsConstructor
 public class DefaultExpressionNodeVisitor implements ExpressionNodeVisitor {
     Map<String, VisitorData> data;
 
     public DefaultExpressionNodeVisitor(Map<String, VisitorData> data) {
         this.data = data;
     }
-
     @Override
     public VisitorData visitBinaryNode(BinaryOperationNode node) {
         VisitorData leftNodeAccept = node.getLeftNode().accept(this);
@@ -106,9 +107,10 @@ public class DefaultExpressionNodeVisitor implements ExpressionNodeVisitor {
     public VisitorData visitValueNode(ValueNodeImpl node) {
         Token value = node.getValue();
 
-        if(data.containsKey(value.getValue())){
+        if(data != null && data.containsKey(value.getValue())){
             return data.get(value.getValue());
         }
+
         return new VisitorData(value.getValue());
     }
 }
