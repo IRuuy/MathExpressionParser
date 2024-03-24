@@ -12,6 +12,7 @@ yourself or use the `LexemeListFactory`, however, in the first case
 , the standard list of tokens must be included in the list of tokens.
 You can do this using: `LexemeListFactory.generateStandardLexemes()`.
 
+The implementation is in the tests - [LexerTest](/src/test/java/ru/shulgindaniil/token/LexerTest.java), at the `getTokensWithCustomOptionsTest` method, or in the contract example below.
 ```java
 List<TokenType> lexemeList = LexemeListFactory.getLexemeList(
         List.of(CustomUnaryOperator.values()),
@@ -89,7 +90,7 @@ TokenStream stream = lexer.getTokenStream(statement);
     </tr>
 </table>
 
-### Standard set of lexemes
+### Standard lexemes
 <table>
     <tr>
         <th>Lexeme</th>

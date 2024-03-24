@@ -11,5 +11,5 @@
   * [Lexemes](docs/en/lexer.md#lexemes)
     * [Operations](docs/en/lexer.md#operations)
     * [Lexemes](docs/en/lexer.md#functions)
-    * [Standard-set-of-lexemes](docs/en/lexer.md#standard-set-of-lexemes-1)
+    * [Standard lexemes](docs/en/lexer.md#standard-lexemes)
 
