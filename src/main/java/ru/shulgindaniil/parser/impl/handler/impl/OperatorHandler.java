@@ -26,11 +26,11 @@ public class OperatorHandler implements Handler {
      *     <li>
      *      While there is a token operator op2 at the top of the stack, whose priority is higher than or equal to the priority of op1, and if the priorities are equal, op1 is left associative:
      *      <ul>
-     *          <li>Переложить op2 из стека в выходную очередь</li>
+     *          <li>Переложить op2 из стека в выходную очередь.</li>
      *      </ul>
      *     </li>
      *     <li>
-     *         Put op1 on the stack
+     *         Put op1 on the stack.
      *     </li>
      * </ul>
      * @param currentToken
