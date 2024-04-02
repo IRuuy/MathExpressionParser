@@ -37,7 +37,7 @@ public class RightParenthesesHandler extends ParenthesesHandlerAbstract {
     /**
      * <b>If the token is a closing parenthesis:</b>
      * <ul>
-     *     <li>Process everything before the closing brace to the opening brace - {@link ru.shulgindaniil.parser.impl.handler.impl.ParenthesesHandlerAbstract#addValueToListNode(Deque, Deque)}  addValueToListNode}.</li>
+     *     <li>Process everything from the closing parenthesis to the opening parenthesis - {@link ru.shulgindaniil.parser.impl.handler.impl.ParenthesesHandlerAbstract#addValueToListNode(Deque, Deque)}  addValueToListNode}.</li>
      *     <li>Pop the parenthesis from the stack, but do not add it to the output queue.</li>
      *     <li>If the token at the top of the stack is a function, move it to the output queue.</li>
      * </ul>
