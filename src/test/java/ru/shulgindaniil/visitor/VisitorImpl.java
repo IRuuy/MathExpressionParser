@@ -6,7 +6,6 @@ import ru.shulgindaniil.ast.visitor.DefaultExpressionNodeVisitor;
 import ru.shulgindaniil.ast.visitor.VisitorData;
 
 import java.util.List;
-import java.util.Map;
 
 import static ru.shulgindaniil.visitor.CustomFunction.LOG;
 
