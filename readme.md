@@ -18,7 +18,7 @@ This solution has one non-obvious drawback. The parser works according to the so
 * [References](#references)
 
 ## Detailed description of the logic of the components
-* [Lexer](docs/en/lexer.md)
+* [Lexer](docs/en/lexer.md#lexer)
   * [Create token stream](docs/en/lexer.md#create-token-stream)
     * [Standard set of lexemes](docs/en/lexer.md#standard-set-of-lexemes)
     * [Customized set of lexemes](docs/en/lexer.md#customized-set-of-lexemes)
@@ -26,6 +26,10 @@ This solution has one non-obvious drawback. The parser works according to the so
     * [Operations](docs/en/lexer.md#operations)
     * [Lexemes](docs/en/lexer.md#functions)
     * [Standard lexemes](docs/en/lexer.md#standard-lexemes)
+* [Parser](docs/en/parser.md#parser)
+  * [Working with the parser](docs/en/parser.md#working-with-the-parser)
+  * [Algorithm](docs/en/parser.md#algorithm)
+  * [Chain of handlers](docs/en/parser.md#chain-of-handlers)
 
 
 ## Get Started
