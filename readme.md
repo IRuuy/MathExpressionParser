@@ -12,6 +12,7 @@ This solution has one non-obvious drawback. The parser works according to the so
 
 ## Table of content
 * [Detailed description of the logic of the components](#detailed-description-of-the-logic-of-the-components)
+* [Example of constructing a syntactically abstract tree](#example-of-constructing-a-syntactically-abstract-tree)
 * [Get Started](#get-started)
   * [Working with the parser](#working-with-the-parser)
   * [Traversing a constructed syntactically abstract tree](#traversing-a-constructed-syntactically-abstract-tree)
@@ -30,6 +31,16 @@ This solution has one non-obvious drawback. The parser works according to the so
   * [Working with the parser](docs/en/parser.md#working-with-the-parser)
   * [Algorithm](docs/en/parser.md#algorithm)
   * [Chain of handlers](docs/en/parser.md#chain-of-handlers)
+* [Syntactically abstract tree traversal](docs/en/visitor.md#syntactically-abstract-tree-traversal)
+  * [Standard bypass without using variables](docs/en/visitor.md#standard-bypass-without-using-variables)
+  * [Standard traversal using variables](docs/en/visitor.md#standard-traversal-using-variables)
+  * [Traversal using custom Visitor](docs/en/visitor.md#traversal-using-custom-visitor)
+
+## Example of constructing a syntactically abstract tree
+**Statement:** `(field_1 > 5 AND field_1 < 10) AND NOT (field_2 = "value1" OR field_2 = "value2")`
+
+**Syntactically abstract tree:**
+![Синтаксически абстрактное дерево](/docs/images/astExample.png)
 
 
 ## Get Started
